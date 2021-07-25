@@ -6,7 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
-
+/node_modules
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -27,3 +27,33 @@
 /config/master.key
 
 /docker/data/*
+
+
+*.rbc
+capybara-*.html
+.rspec
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/db/*.sqlite3-[0-9]*
+/public/system
+/coverage/
+/spec/tmp
+*.orig
+rerun.txt
+pickle-email-*.html
+
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+/vendor/bundle
+
+# Ignore precompiled javascript packs
+/public/packs
+/public/packs-test
+/public/assets
+
+
