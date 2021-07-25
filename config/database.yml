@@ -1,0 +1,23 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  user: usuario
+  password: senhausuario
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: pedido_rapido_development
+
+
+  test:
+  <<: *default
+  database: pedido_rapido_test
+
+  production:
+  <<: *default
+  database: pedido_rapido_production
+  username: usuario
+  password: <%= ENV['PEDIDO_RAPIDO_DATABASE_PASSWORD'] %>
