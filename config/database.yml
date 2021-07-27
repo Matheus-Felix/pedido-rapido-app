@@ -19,5 +19,5 @@ development:
   production:
   <<: *default
   database: pedido_rapido_production
-  username: usuario
+  username: paulo
   password: <%= ENV['PEDIDO_RAPIDO_DATABASE_PASSWORD'] %>
