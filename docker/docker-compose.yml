@@ -5,8 +5,8 @@ services:
    db:
       image: postgres:12.3-alpine
       environment:
-         POSTGRES_PASSWORD: paulo
-         POSTGRES_USER: adsadsa
+         POSTGRES_PASSWORD: senhausuario
+         POSTGRES_USER: usuario
          POSTGRES_DB: pedido_rapido_development
       volumes:
          - /var/run/postgresql:/var/run/postgresql
