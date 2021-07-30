@@ -1,0 +1,38 @@
+<div class="box-container-general">
+  <div class="box-content-info">
+    <%= image_tag("logo-tipo") %>
+    <p>Sua plataforma de gerenciamento de pedidos.</p>
+  </div>
+  <div class="box-content-login">
+    <div class="box-container-login">
+      <div class="logo">
+        <%= image_tag("logo") %>
+      </div>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "off" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <% if devise_mapping.rememberable? %>
+          <div class="field">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end %>
+
+        <div class="actions">
+          <%= f.submit "Entrar" %>
+        </div>
+      <% end %>
+      <div class="more-links">
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>
