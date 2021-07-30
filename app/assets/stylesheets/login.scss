@@ -1,0 +1,36 @@
+.box-container-general {
+    display: flex;
+    justify-content: space-between;   
+    height: 100%;
+
+    .box-content-info {
+        margin: auto;
+    }
+
+    .box-content-login {
+        width: 100%;
+        max-width: 638px;
+        height: 100vh;
+        background-color: var(--color-primary);
+        
+        .box-container-login {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 0 80px;
+
+            .logo {
+                margin-bottom: 30px;
+            }
+
+            .more-links {
+                text-align: left;
+                margin-top: 20px;
+                margin-right: auto;
+            }
+        }
+     
+    }
+}

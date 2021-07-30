@@ -13,3 +13,66 @@
  *= require_tree .
  *= require_self
  */
+
+ /*-- colors --*/
+
+:root {
+    --color-primary: #2A2931;
+    --color-secundary: #F06F38;
+    --color-white: #FFFFFF;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    background-color: var(--color-white)
+}
+
+a, p, label {
+    font-family: Montserrat;
+    color: var(--color-white);
+}
+
+a {
+    text-decoration: none;
+}
+
+input[type=email], input[type=password] {
+    outline: none;
+    border: none;
+    padding: 20px 276px 20px 18px;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 2px solid transparent;
+}
+
+input[type=email]:focus, input[type=password]:focus {
+    border: 2px solid var(--color-secundary);
+}
+
+input[type=submit] {
+    background-color: var(--color-secundary);
+    font-size: 16px;
+    font-weight: bolder;
+    text-align: center;
+    color: var(--color-white);
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    cursor: pointer;
+}
+
+.field {
+    margin: 15px 0;
+}
