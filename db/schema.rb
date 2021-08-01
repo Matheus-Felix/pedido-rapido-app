@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_27_225645) do
+ActiveRecord::Schema.define(version: 2021_08_01_030714) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,15 +23,14 @@ ActiveRecord::Schema.define(version: 2021_07_27_225645) do
 
   create_table "employees", force: :cascade do |t|
     t.string "name"
-    t.integer "type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "worker"
   end
 
   create_table "orders", force: :cascade do |t|
     t.string "client_name"
     t.string "table"
-    t.integer "status"
     t.bigint "employee_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -45,6 +44,7 @@ ActiveRecord::Schema.define(version: 2021_07_27_225645) do
     t.bigint "order_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "status"
     t.index ["order_id"], name: "index_product_orders_on_order_id"
     t.index ["product_id"], name: "index_product_orders_on_product_id"
   end
