@@ -1,0 +1,36 @@
+#manager {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  header {
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--color-primary);
+      padding: 20px;
+      
+      ul {
+        display: flex;
+        
+        li {
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+
+  main {
+    padding: 20px;
+    flex: 1;
+  }
+
+  footer {
+    text-align: center;
+    background-color: var(--color-primary);
+    padding: 20px;
+    position: relative;
+    top: 75px;
+  }
+}

@@ -20,15 +20,24 @@
     --color-primary: #2A2931;
     --color-secundary: #F06F38;
     --color-white: #FFFFFF;
+    --color-gray-light: #e2e2e2;
   }
-
+  
 * {
     margin: 0;
     padding: 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Montserrat;
+}
   
 body {
     background-color: var(--color-white)
+}
+
+.container {
+    padding: 0 20px;
 }
 
 a, p, label {
@@ -38,6 +47,14 @@ a, p, label {
 
 a {
     text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-secundary);
+}
+
+li {
+    list-style: none;
 }
 
 input[type=email], input[type=password] {
