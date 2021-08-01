@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
+# OrdersController
 class OrdersController < ApplicationController
-  before_action :load_order, only: [:update, :destroy, :show]
+  before_action :load_order, only: %i[update destroy show]
 
   def index
     @orders = order.all
   end
 
-  def show
-  end
+  def show; end
 
   def create
     @order = order.new
@@ -20,15 +22,14 @@ class OrdersController < ApplicationController
   end
 
   def destroy
-    @order.destroy!    
+    @order.destroy!
   end
 
   private
 
   def load_order
     @order = order.find(params[:id])
-   end
-  
+  end
 
   def save_order
     @order.save
@@ -36,6 +37,7 @@ class OrdersController < ApplicationController
 
   def order_params
     return {} unless params.has_key?(:order)
+
     params.require(:order).permit(:name)
-   end
   end
+end

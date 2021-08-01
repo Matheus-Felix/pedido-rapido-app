@@ -37,5 +37,5 @@ class CategoriesController < ApplicationController
   def category_params
     return {} unless params.has_key?(:category)
     params.require(:category).permit(:name)
-   end
   end
+end
