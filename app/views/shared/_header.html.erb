@@ -1,0 +1,26 @@
+<header>
+  <nav>
+    <div class="logo">
+      <%= image_tag("logo", width: 50) %>
+    </div>
+    <ul>
+      <li>
+        <%= link_to 'Pedidos', manager_orders_path, class: 'link' %>
+      </li>
+      <li>
+        <%= link_to 'Dashboard', manager_dashboard_index_path, class: 'link' %>
+      </li>
+      <li>
+        <%= link_to 'Produtos', manager_collaborators_path, class: 'link' %>
+      </li>
+        <li>
+        <%= link_to 'Colaboradores', manager_products_path, class: 'link' %>
+      </li>
+    </ul>
+    <div class="logout">
+      <% if user_signed_in? %>
+        <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+      <% end %>
+    </div>
+  </nav>
+</header>

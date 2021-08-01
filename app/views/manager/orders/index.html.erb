@@ -1,0 +1,69 @@
+<div class="box-order">
+  <div class="box-container">
+
+    <div class="box-structure">
+      <div class="box-header">
+        <h3>Novos</h2>
+      </div>
+      <ul id="sortable1" data-status-item="<%= order_status[:open] %>" class="connectedSortable box-body">
+        <% @orders_open.each do |order | %>
+        
+          <li class="ui-state-default" data-order-id="<%= order.id %>">
+            <h4><%= order.order.client_name %> - <%= order.quantity %> - <span><%= order.product.name %></span></h4>
+            <p>Observação: <%= order.aditional_info %></p> 
+          </li>
+         
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="box-structure">
+      <div class="box-header">
+        <h3>Em preparação</h2>
+      </div>
+      <ul id="sortable2" data-status-item="<%= order_status[:preparing] %>" class="connectedSortable box-body">
+        <% @orders_preparing.each do |order | %>
+
+          <li class="ui-state-default" data-order-id="<%= order.id %>">
+            <h4><%= order.order.client_name %> - <%= order.quantity %> - <span><%= order.product.name %></span></h4>
+            <p>Observação: <%= order.aditional_info %></p> 
+          </li>
+
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="box-structure">
+      <div class="box-header">
+        <h3>Concluídos</h2>
+      </div>
+      <ul id="sortable2" data-status-item="<%= order_status[:done] %>" class="connectedSortable box-body">
+         <% @orders_done.each do |order | %>
+         
+          <li class="ui-state-default" data-order-id="<%= order.id %>">
+            <h4><%= order.order.client_name %> - <%= order.quantity %> - <span><%= order.product.name %></span></h4>
+            <p>Observação: <%= order.aditional_info %></p> 
+          </li>
+
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="box-structure">
+      <div class="box-header">
+        <h3>Cancelados</h2>
+      </div>
+      <ul id="sortable2" data-status-item="<%= @orders_status[:canceled] %>" data-id-order= "" class="connectedSortable box-body">
+        <% @orders_canceled.each do |order | %>
+         
+          <li class="ui-state-default" data-order-id="<%= order.id %>">
+            <h4><%= order.order.client_name %> - <%= order.quantity %> - <span><%= order.product.name %></span></h4>
+            <p>Observação: <%= order.aditional_info %></p> 
+          </li>
+
+        <% end %>
+      </ul>
+    </div>
+
+  </div>
+</div>
