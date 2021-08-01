@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'manager', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag asset_path('logo.png') %>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +14,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
   </head>
 
-  <body>
-    <%= yield %>
+  <body id="manager">
+    <%= render "shared/header" %>
+
+    <main>
+      <%= yield %>
+    </main>
+    
+    <%= render "shared/footer" %>
   </body>
 </html>
