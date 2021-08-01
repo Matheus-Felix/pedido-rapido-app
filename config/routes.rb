@@ -16,6 +16,11 @@ Rails.application.routes.draw do
 
   namespace :manager do
     get '/' => 'managers#index'
+
+    resources :dashboard, only: %i[index update destroy show create]
+    resources :collaborators, only: %i[index update destroy show create]
+    resources :products, only: %i[index update destroy show create]
+    resources :orders, only: %i[index update destroy show create]
   end
 
   root to: 'home#index'
