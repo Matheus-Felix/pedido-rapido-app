@@ -12,11 +12,11 @@ development:
 test:
   <<: *default
   database: pedido_rapido_test
-  username: usuario
+  user: usuario
   password: senhausuario
 
 production:
   <<: *default
   database: pedido_rapido_production
-  username: usuario
+  user: usuario
   password: <%= ENV['PEDIDO_RAPIDO_DATABASE_PASSWORD'] %>

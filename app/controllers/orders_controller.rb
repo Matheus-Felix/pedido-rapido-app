@@ -2,16 +2,17 @@
 
 # OrdersController
 class OrdersController < ApplicationController
+
   before_action :load_order, only: %i[update destroy show]
 
   def index
-    @orders = order.all
+    @orders = Order.all
   end
 
   def show; end
 
   def create
-    @order = order.new
+    @order = Order.new
     @order.attributes = order_params
     save_order
   end
@@ -28,7 +29,7 @@ class OrdersController < ApplicationController
   private
 
   def load_order
-    @order = order.find(params[:id])
+    @order = Order.find(params[:id])
   end
 
   def save_order
